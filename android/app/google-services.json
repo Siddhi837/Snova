@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "77556485294",
+    "project_id": "snova-9a86d",
+    "storage_bucket": "snova-9a86d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77556485294:android:bed5e44aa6e5f4b690313f",
+        "android_client_info": {
+          "package_name": "com.example.snova"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "77556485294-a0mean3ns5l04vcm0l529b1e0p7k8h4o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.snova",
+            "certificate_hash": "b9508d747f1465c12e4a64a0acbccbf64d137cea"
+          }
+        },
+        {
+          "client_id": "77556485294-igtcar7ob99us61j473eikel7cs1p0sc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLPfc1t9dKzttWnxwHCCIcE0rQfbpUC9o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "77556485294-igtcar7ob99us61j473eikel7cs1p0sc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
