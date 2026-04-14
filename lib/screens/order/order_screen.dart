@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:snova/screens/home/home_page_activity.dart';
 import 'package:snova/screens/order/order_controller.dart';
 
 class OrderScreen extends StatelessWidget {
@@ -11,7 +12,19 @@ class OrderScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
-      appBar: AppBar(title: const Text("My Orders"), centerTitle: true),
+      appBar: AppBar(
+        title: const Text("My Orders"),
+        centerTitle: true,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => HomePageActivity()),
+            );
+          },
+        ),
+      ),
       body: Obx(() {
         if (controller.isLoading.value) {
           return const Center(child: CircularProgressIndicator());
@@ -22,9 +35,7 @@ class OrderScreen extends StatelessWidget {
         }
 
         return Theme(
-          data: Theme.of(context).copyWith(
-            dividerColor: Colors.transparent,
-          ),
+          data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
           child: ListView.builder(
             itemCount: controller.orders.length,
             itemBuilder: (context, index) {
@@ -37,14 +48,15 @@ class OrderScreen extends StatelessWidget {
                   collapsedShape: const Border(),
                   title: Text("Total: ₹${order.total.toStringAsFixed(2)}"),
                   subtitle: Text("Status: ${order.status}"),
-                  children: order.items.map((item) {
-                    return ListTile(
-                      leading: Image.network(item.thumbnail, width: 50),
-                      title: Text(item.title),
-                      subtitle: Text("Qty: ${item.quantity}"),
-                      trailing: Text("₹${item.price}"),
-                    );
-                  }).toList(),
+                  children:
+                      order.items.map((item) {
+                        return ListTile(
+                          leading: Image.network(item.thumbnail, width: 50),
+                          title: Text(item.title),
+                          subtitle: Text("Qty: ${item.quantity}"),
+                          trailing: Text("₹${item.price}"),
+                        );
+                      }).toList(),
                 ),
               );
             },

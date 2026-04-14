@@ -26,11 +26,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.pop(context),
-        ),
-        actions: const [
-          Icon(Icons.search, color: Colors.black),
-          SizedBox(width: 16),
-        ],
+        )
       ),
       body: Column(
         children: [
