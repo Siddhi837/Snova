@@ -37,6 +37,13 @@
             {
               "client_id": "77556485294-igtcar7ob99us61j473eikel7cs1p0sc.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "77556485294-o5jabhmrvv34i1oud1d2q8g7qj741nkv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.snova"
+              }
             }
           ]
         }
